@@ -32,10 +32,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
+// Route::get('/',function(){
+//     return view('test',array(
+//         'name'=> 'สมหมาย',
+//         'age'=> 30,
+//         'email'=> 'abcdef@hijk.com',
+//     ));
+// });
+
 Route::get('/',function(){
-    return view('test',array(
-        'name'=> 'สมหมาย',
-        'age'=> 30,
-        'email'=> 'abcdef@hijk.com',
-    ));
+        $name = 'สมหมาย';
+        $age = 30;
+        $email = 'abcdef@hijk.com';
+
+    $activities = [];
+    return view('test',compact('activities'));
 });
